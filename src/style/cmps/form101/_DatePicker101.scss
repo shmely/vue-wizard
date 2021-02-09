@@ -1,0 +1,34 @@
+.date-picker-101 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-inline-end: rem(30px);
+    margin-bottom: rem(6px);
+    width: 100%;
+    .date-inner-cont {
+        position: relative;
+        svg {
+            position: absolute;
+            top: 12px;
+            left: 17px;
+        }
+
+        .input-101-error {
+            border: 1px solid #db0b0b;
+        }
+    }
+    .error {
+        color: #db0b0b;
+        font-size: rem(16px);
+        line-height: 21px;
+        font-family: assistant-semi-bold;
+    }
+    .asterisk {
+        position: absolute;
+        right: -20px;
+        top: -10px;
+        color: #db0b0b;
+        font-size: rem(30px);
+        line-height: rem(39px);
+    }
+}

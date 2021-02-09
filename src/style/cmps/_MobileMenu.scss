@@ -1,0 +1,100 @@
+.mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 20;
+    overflow: auto;
+    transform: translate(110%);
+    place-content: start start;
+    color: #454545;
+    transition: 500ms;
+    .row-1 {
+        margin-bottom: 13px;
+        width: 100%;
+        .btn-watch-as-mobile {
+            margin-inline-end: rem(26px);
+            font-size: rem(16px);
+            color: white;
+            background-color: #068dc8;
+            width: 101px;
+            height: 40px;
+            @include for-mini-mobile-layout {
+                height: 30px;
+            }
+            border-radius: 0px 0px rem(15px) rem(15px);
+            text-align: center;
+        }
+        .close-menu-btn {
+            margin-inline-end: 21px;
+            margin-top: 23px;
+        }
+    }
+    .mobile-menu-cont {
+        width: 100%;
+        height: 100%;
+        padding-bottom: rem(40px);
+        padding-inline-start: rem(37px);
+        padding-inline-end: rem(43px);
+        font-size: rem(22px);
+        .user-details-mobile {
+            height: 28px;
+            font-size: rem(18px);
+            @include for-mini-mobile-layout {
+                font-size: rem(16px);
+            }
+            * {
+                margin-inline-end: rem(7px);
+            }
+            :last-child {
+                margin-bottom: rem(17px);
+            }
+        }
+        .boundary-line {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            border-top: 1px solid #e1e6e9;
+            margin-bottom: rem(26px);
+            margin-top: rem(20px);
+            @include for-mini-mobile-layout {
+                margin-bottom: rem(12px);
+                margin-top: rem(12px);
+            }
+        }
+        .actions-menu {
+            width: 100%;
+            margin-inline-start: rem(4px);
+            li {
+                cursor: pointer;
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: rem(16px);
+                align-items: center;
+                * {
+                    @include for-mini-mobile-layout {
+                        margin-inline-end: rem(14px);
+                    }
+                }
+                @include for-mini-mobile-layout {
+                    margin-bottom: rem(12px);
+                }
+            }
+        }
+        .exit-part {
+            cursor: pointer;
+            margin-inline-start: rem(4px);
+            * {
+                margin-inline-end: rem(23px);
+            }
+        }
+    }
+
+    &.menu-open {
+        top: 0;
+        transition: 500ms;
+        transform: translate(0);
+    }
+}

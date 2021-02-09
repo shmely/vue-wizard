@@ -1,0 +1,40 @@
+.tooltip {
+    position: relative;
+    .tooltip-header {
+        display: flex;
+        align-items: center;
+        height: 16px;
+        z-index: 1;
+        cursor: pointer;
+        .title {
+            font-size: rem(16px);
+            line-height: 21px;
+            color: #454545;
+            margin-inline-end: rem(10px);
+        }
+        .short-tooltip {
+            z-index: 1;
+            padding: 18px 16px 22px 40px;
+            background: white;
+            color: #454545;
+            position: absolute;
+            width: max-content;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            filter: drop-shadow(1px 1px 5px rgba(56, 54, 54, 0.86));
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                top:60px;
+                right: 25px;
+                height: 0;
+                border: 10px solid white;
+                border-color: white transparent transparent transparent;
+            }
+        }
+    }
+}

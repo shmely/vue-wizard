@@ -1,0 +1,67 @@
+.chart-cont {
+    position: relative;
+    width: 200px;
+    height: 90px;
+    @include for-tablet-layout {
+        width: 150px;
+    }
+    @include for-mini-tablet-layout {
+        width: 135px;
+    }
+    .numbers {
+        width: 130px;
+        position: absolute;
+        bottom: 21px;
+        text-align: center;
+
+        color: #00a3ea;
+        .big {
+            font-size: rem(50px);
+            line-height: rem(50px);
+        }
+        .small {
+            font-size: rem(16px);
+            line-height: rem(16px);
+        }
+    }
+    .chart-skills {
+        position: relative;
+        width: 129px;
+        height: 64px;
+        overflow: hidden;
+        &::before {
+            position: absolute;
+            box-sizing: border-box;
+            content: "";
+            width: inherit;
+            height: inherit;
+            border: 6px solid #d6edf9;
+            border-bottom: none;
+            border-top-left-radius: 64px;
+            border-top-right-radius: 64px;
+        }
+        span {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: inherit;
+            height: inherit;
+            border: 6px solid;
+            border-top: none;
+            border-bottom-left-radius: 175px;
+            border-bottom-right-radius: 175px;
+            transform-origin: 50% 0;
+            animation-fill-mode: forwards;
+            animation-duration: 0.4s;
+            animation-timing-function: linear;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+    }
+    .title {
+        position: absolute;
+        font-size: rem(18px);
+        line-height: 24px;
+        bottom: -3px;
+    }
+}

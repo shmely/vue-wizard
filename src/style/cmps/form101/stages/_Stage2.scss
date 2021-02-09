@@ -1,0 +1,201 @@
+.stage2 {
+    .main-title {
+        display: grid;
+        grid-template-columns: 25% 1fr 25%;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        background: rgba(149, 197, 61, 0.2);
+        align-items: center;
+        padding: 0 410px;
+        .title {
+            grid-column: 2;
+            font-size: rem(15px);
+            font-family: assistant-semi-bold;
+        }
+        .btn-skip {
+            grid-column: 3;
+            width: 68px;
+            height: 30px;
+            background: #95c53d;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: rem(18px);
+            place-self: end;
+            align-self: center;
+            font-family: assistant-regular;
+        }
+    }
+    .form-cont {
+        width: 100%;
+        background: white;
+        padding: 40px 410px 25px 410px;
+        .childs-title {
+            width: 100%;
+        }
+        .form {
+            background: rgba(196, 230, 247, 0.1);
+            width: 100%;
+            .loadingImg {
+                position: fixed;
+                height: 50px;
+                width: 217px;
+                height: 239px;
+                top: 50%;
+                left: 50%;
+                z-index: 2;
+            }
+            .childs-details {
+                padding: 0 17px;
+                margin-top: 40px;
+                background: #dcf2ff;
+                padding: 22px 27px 18px 27px;
+                .field {
+                    width: 199px;
+                    margin-inline-end: 12px;
+                    -webkit-margin-end: 12px;
+                }
+                .btn-add-child {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 136px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    font-size: rem(22px);
+                    color: #ffffff;
+                    line-height: 28px;
+                    background: #95c53d;
+                    font-family: assistant-regular;
+                    margin-top: 25px;
+                    margin-inline-start: 37px;
+                    -webkit-margin-start: 37px;
+                    &.disable {
+                        background: #8b9aa9;
+                        svg {
+                            opacity: 0.5;
+                        }
+                        span {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                .chks {
+                    display: flex;
+                    margin-top: 14px;
+                    div:first-child {
+                        margin-inline-end: 36px;
+                        -webkit-margin-end: 36px;
+                    }
+                    label {
+                        margin-inline-start: 8px;
+                        -webkit-margin-start: 8px;
+                    }
+                }
+            }
+        }
+        .edit-mode {
+            background: #dcf2ff;
+            font-family: assistant-regular;
+            font-size: rem(20px);
+            line-height: 26px;
+            margin: 7px 0;
+            padding: 22px 27px 18px 27px;
+            .field {
+                width: 199px;
+                margin-inline-end: 12px;
+                -webkit-margin-end: 12px;
+            }
+            .chks {
+                display: flex;
+                margin-top: 14px;
+                div:first-child {
+                    margin-inline-end: 36px;
+                    -webkit-margin-end: 36px;
+                }
+                label {
+                    margin-inline-start: 8px;
+                    -webkit-margin-start: 8px;
+                }
+            }
+            .btn-save-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 136px;
+                height: 50px;
+                border: none;
+                outline: none;
+                font-size: rem(22px);
+                color: #ffffff;
+                line-height: 28px;
+                background: #95c53d;
+                font-family: assistant-regular;
+                margin-bottom: 3px;
+                margin-inline-start: 37px;
+                -webkit-margin-start: 37px;
+                &.disable {
+                    background: #8b9aa9;
+                    svg {
+                        opacity: 0.5;
+                    }
+                    span {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+        .view-mode {
+            display: flex;
+            background: #dcf2ff;
+            font-family: assistant-regular;
+            font-size: rem(20px);
+            line-height: 26px;
+            width: 100%;
+            height: 85px;
+            margin-top: 7px;
+
+            .name {
+                padding: 29px 26px;
+                background: #afdef5;
+                width: 295px;
+                border-inline-end: 1px solid white;
+            }
+            .id-num {
+                padding: 29px 25px;
+                width: 200px;
+                border-inline-end: 1px solid white;
+            }
+            .birth-date {
+                padding: 29px 18px;
+                width: 150px;
+                border-inline-end: 1px solid white;
+            }
+            .possession {
+                padding-top: 29px;
+                padding-bottom: 29px;
+                display: flex;
+                justify-content: center;
+                width: 97px;
+                border-inline-end: 1px solid white;
+            }
+            .allowance {
+                padding-top: 29px;
+                padding-bottom: 29px;
+                padding-inline-start: 25px;
+                -webkit-padding-start: 25px;
+                width: 196px;
+                border-inline-end: 1px solid white;
+            }
+            .edit-del-btns {
+                padding-top: 35px;
+                padding-bottom: 31px;
+                display: flex;
+                justify-content: space-evenly;
+                width: 121px;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.input-field-101 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-inline-end: rem(30px);
+    margin-bottom: rem(6px);
+    .error {
+        color: #db0b0b;
+        font-size: rem(16px);
+        line-height: 21px;
+        font-family: assistant-semi-bold;
+    }
+    .input-101-error {
+        border: 1px solid #db0b0b;
+    }
+    .asterisk {
+        position: absolute;
+        right: -20px;
+        top: -10px;
+        color: #DB0B0B;
+        font-size: rem(30px);
+        line-height: rem(39px);
+    }
+}

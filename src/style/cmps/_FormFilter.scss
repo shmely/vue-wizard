@@ -1,0 +1,247 @@
+.side {
+    background-color: white;
+    font-size: rem(20px);
+    line-height: rem(26px);
+    width: fit-content;
+    padding: 35px 54px 143px 109px;
+    width: 397px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: fit-content(1px);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+        "title"
+        "dd"
+        "radios"
+        "dropdown-month-year"
+        "submit-button";
+    @include for-laptop-layout {
+        padding: 75px 50px 143px 60px;
+        width: 341px;
+    }
+    @include for-small-laptop-layout {
+        width: 287px;
+
+        padding: 35px 32px 143px 45px;
+    }
+    @include for-tablet-layout {
+        padding: 25px 80px 0 45px;
+        height: 250px;
+        width: 100%;
+        height: auto;
+        grid-template-columns: fit-content(1px) fit-content(1px);
+        grid-template-rows: fit-content(1px) fit-content(1px) fit-content(1px) fit-content(1px);
+        grid-template-areas:
+            "title title"
+            "dd dd"
+            "radios radios"
+            "dropdown-month-year submit-button";
+    }
+    @include for-mobile-layout {        
+        justify-content: center;
+        grid-template-columns: 100%;
+        grid-row-gap: 0;
+        grid-column-gap: 0;
+        padding: 0;
+        grid-template-areas:
+            "title"
+            "dd"
+            "radios"
+            "dropdown-month-year"
+            "submit-button";        
+        &.show-filter {
+            display: grid;
+        }
+    }
+    .title-cont {
+        grid-area: title;
+        @include for-mobile-layout {
+            background: #c4e6f7;
+            padding-left: rem(20px);
+            padding-right: rem(20px);
+        }
+
+        .title {
+            z-index: 2;
+
+            @include for-small-laptop-layout {
+                margin-bottom: 10px;
+            }
+            font-family: assistant-semi-bold;
+        }
+    }
+
+    .drop-downs {
+        grid-area: dd;
+        @include for-tablet-layout {
+            flex-direction: row;
+        }
+        @include for-mobile-layout {
+            background: #c4e6f7;
+            padding: 0 rem(20px);
+            padding-bottom: rem(20px);
+            flex-direction: column;
+        }
+        .dd {
+            background-color: white;
+            z-index: 9;
+            width: 100%;
+            margin-bottom: 10px;
+
+            @include for-tablet-layout {
+                width: 210px;
+            }
+            @include for-mobile-layout {
+                width: 100%;
+            }
+            &.branch {
+                z-index: 10;
+                @include for-tablet-layout {
+                    margin-inline-end: rem(20px);
+                }
+                @include for-mobile-layout {
+                    margin-inline-end: 0;
+                }
+            }
+        }
+    }
+    .radios {
+        z-index: 2;
+        grid-area: radios;
+        @include for-laptop-layout {
+            justify-content: space-between;
+        }
+        @include for-small-laptop-layout {
+            align-items: center;
+            justify-content: flex-start;
+        }
+        @include for-tablet-layout {
+            justify-content: flex-start;
+            align-items: center;
+        }
+        @include for-mobile-layout {
+            padding-top: 20px;
+            margin-bottom: 20px;
+            margin-inline-start: 20px;
+        }
+        div:first-child {
+            margin-inline-end: rem(24px);
+            @include for-small-laptop-layout {
+                margin-inline-end: rem(15px);
+            }
+        }
+    }
+    .periods-cont {
+        width: 100%;
+        grid-area: dropdown-month-year;
+        @include for-tablet-layout {
+            flex-direction: column;
+        }
+        @include for-mobile-layout {
+            padding-right: rem(20px);
+            padding-left: rem(20px);
+        }
+        &.periods-106 {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .periods {
+            :first-child {
+                margin-inline-end: rem(15px);
+                @include for-mobile-layout {
+                    margin-inline-end: 0;
+                }
+            }
+            @include for-small-laptop-layout {
+                justify-content: space-around;
+            }
+            @include for-tablet-layout {
+                justify-content: flex-start;
+            }
+            @include for-mobile-layout {
+                justify-content: space-between;
+            }
+            .select-label {
+                font-family: assistant-semi-bold;
+                z-index: 2;
+            }
+            .select-month {
+                @include hilan-select;
+                z-index: 2;
+                width: 106px;
+                margin-bottom: rem(5px);
+                @include for-tablet-layout {
+                    margin-inline-end: rem(10px);
+                }
+                @include for-mobile-layout {
+                    width: 150px;
+                    margin-inline-end: rem(15px);
+                }
+
+                &.background-en {
+                    background-position-x: 99%;
+                }
+            }
+            .select-year {
+                z-index: 2;
+                @include hilan-select;               
+                margin-bottom: rem(5px);
+                width: 90px;
+                @include for-mobile-layout {
+                    width: 115px;
+                }
+                &.background-en {
+                    background-position-x: 99%;
+                }
+            }
+        }
+    }
+
+    .btn-submit-container {
+        grid-area: submit-button;
+        @include for-tablet-layout {
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        @include for-mobile-layout {
+            padding: 0 rem(20px);
+        }
+        .btn-show {
+            z-index: 2;
+            padding: 0 rem(20px);
+            font-size: rem(20px);
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background-color: #95c53d;
+            margin-top: rem(17px);
+            color: white;
+            cursor: pointer;
+            &.btn-show:disabled {
+                opacity: 0.5;
+            }
+
+            @include for-small-laptop-layout {
+                width: 100%;
+                height: 42px;
+            }
+
+            font-family: assistant;
+            @include for-tablet-layout {
+                width: 125px;
+                margin-inline-start: rem(15px);
+                margin-bottom: 5px;
+            }
+            @include for-mobile-layout {
+                width: 100%;
+                margin-inline-start: rem(0px);
+                height: 50px;
+            }
+        }
+    }
+}

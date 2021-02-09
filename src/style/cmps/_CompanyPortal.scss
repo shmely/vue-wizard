@@ -1,0 +1,118 @@
+.portal-cont {
+    @include for-mobile-layout {
+        padding-inline-start: 0;
+        justify-content: center;
+    }
+    .main-nav {
+        background-color: #00a3ea;
+        height: 63px;
+        padding-inline-end: rem(170px);
+        padding-inline-start: rem(170px);
+        padding-top: rem(19px);
+        @include for-laptop-layout {
+            padding-inline-end: rem(30px);
+            padding-inline-start: rem(100px);
+        }
+        @include for-tablet-layout {
+            padding-inline-end: rem(30px);
+            padding-inline-start: rem(30px);
+        }
+        @include for-mobile-layout {
+            padding-left:  0;
+            padding-right:  0;
+            display: flex;
+            align-items: baseline;
+        }
+        .menu-icon {
+            display: none;
+            @include for-mobile-layout {
+                display: inline-block;
+                grid-column: 1;
+                align-self: center;
+                margin-inline-start: rem(13px);
+            }
+        }
+        .nav-link {
+            position: relative;
+            margin-inline-end: rem(75px);
+            text-decoration: none;
+            color: white;
+            font-size: rem(22px);
+            line-height: 29px;
+            height: 100%;
+            @include for-laptop-layout {
+                padding: 0 0;
+            }
+            @include for-mobile-layout {
+                display: none;
+                &.active {
+                    display: flex;
+                    height: auto;
+                    margin-inline-start: rem(15px);
+                    width: auto;
+                }
+            }
+        }
+
+        .portal-btn {
+            @include for-mini-tablet-layout {
+                display: none;
+            }
+            @include for-mobile-layout {
+                display: none;
+                &.active {
+                    display: inline-block;
+                }
+            }
+            color: white;
+            display: inline;
+            display: inline-flex;
+            flex-direction: column;
+            cursor: pointer;
+            .btn-text {
+                margin-inline-end: rem(5px);
+            }
+            &:hover {
+                .dropdown-content {
+                    display: block;
+                }
+            }
+            .dropdown-content {
+                display: none;
+                z-index: 5;
+                width: 100%;
+                background-color: white;
+                a {
+                    color: #454545;
+                    padding-bottom: rem(5px);
+                    text-decoration: none;
+                    display: block;
+                    font-size: rem(20px);
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    .active {
+        &.active:after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            left: 0;
+            width: 100%;
+            bottom: -0.82rem;
+            background-color: white;
+            width: 100%;
+            margin-top: rem(11px);
+        }
+    }
+    .portal-back {
+        display: none;
+        @include for-mobile-layout {
+            padding: 0 rem(20px);
+            display: flex;
+            flex-grow: 1;
+            width: 16px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.titels-container {
+    height: 166px;
+    padding: 24px 0 25px 410px;
+    .info-101 {
+        padding-top: rem(29px);
+        padding-bottom: rem(63px);
+        margin-inline-start: 58px;
+        div {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            z-index: 1;
+            font-size: rem(16px);
+            width: 499px;
+            height: 609px;
+            padding: 23px 26px 40px 28px;
+            background: #ffffff;
+            border: 1px solid #afbabf;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 3.3px;
+            .boundary-line {
+                width: 445px;
+                border-top: 1px solid #afbabf;
+                margin-bottom: rem(29px);
+            }
+            padding-inline-end: 5px;
+            .sub-title {
+                margin-bottom: 0;
+            }
+            p {
+                margin-bottom: rem(25px);
+            }
+        }
+    }
+}
